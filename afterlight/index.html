@@ -1,0 +1,72 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#10151d" />
+    <meta name="description" content="A story hidden beneath the winter snow." />
+    <title>AFTERLIGHT: WINTER SIGNAL</title>
+  </head>
+  <body>
+    <div id="app">
+      <div id="game-background"></div>
+
+      <main class="start-screen">
+        <div class="top-label">AFTERLIGHT PROJECT · 001</div>
+
+        <div class="snowflake">✳</div>
+
+        <section class="title-block">
+          <p class="eyebrow">AN INTERACTIVE STORY</p>
+          <h1>AFTERLIGHT</h1>
+          <p class="subtitle">WINTER SIGNAL</p>
+          <p class="description">
+            Some signals are meant for only one person.
+          </p>
+        </section>
+
+        <nav class="menu">
+          <button id="new-game" class="menu-button primary">
+            <span>01</span>
+            <span>NEW GAME</span>
+            <span>↗</span>
+          </button>
+
+          <button id="continue-game" class="menu-button">
+            <span>02</span>
+            <span>CONTINUE</span>
+            <span>↗</span>
+          </button>
+
+          <button id="open-archive" class="menu-button">
+            <span>03</span>
+            <span>SECRET ARCHIVE</span>
+            <span>↗</span>
+          </button>
+        </nav>
+
+        <footer class="screen-footer">
+          <span>CHAPTER I · THE STATION</span>
+          <span id="status">SIGNAL LOST</span>
+        </footer>
+      </main>
+
+      <div id="overlay" class="overlay hidden">
+        <section class="dialog">
+          <button id="close-overlay" class="close-button" aria-label="Close">×</button>
+          <p class="eyebrow" id="dialog-label">INCOMING TRANSMISSION</p>
+          <h2 id="dialog-title">A new story begins.</h2>
+          <p id="dialog-text"></p>
+          <button id="dialog-action" class="menu-button primary">
+            <span>01</span>
+            <span>CONTINUE</span>
+            <span>↗</span>
+          </button>
+        </section>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

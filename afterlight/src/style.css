@@ -1,0 +1,293 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  font-family: 'Manrope', sans-serif;
+  color: #e7eaf0;
+  background: #10151d;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-optical-sizing: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+button {
+  font: inherit;
+}
+
+#app {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+  isolation: isolate;
+  background:
+    radial-gradient(ellipse at 50% 80%, #293746 0%, transparent 48%),
+    linear-gradient(180deg, #10151d 0%, #1b2835 58%, #10151d 100%);
+}
+
+#game-background {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.8;
+  background:
+    linear-gradient(180deg, transparent 35%, #10151d 100%),
+    repeating-linear-gradient(
+      90deg,
+      transparent 0 9%,
+      #c5d6e0 9.1% 9.2%,
+      transparent 9.3% 18%
+    );
+  mask-image: linear-gradient(180deg, transparent 8%, black 100%);
+}
+
+#game-background::before {
+  content: '';
+  position: absolute;
+  left: -10%;
+  right: -10%;
+  bottom: 0;
+  height: 37%;
+  background:
+    linear-gradient(165deg, transparent 0 35%, #c1d1d9 35.2% 36%, transparent 36.2%),
+    linear-gradient(195deg, transparent 0 42%, #8b9eac 42.2% 43%, transparent 43.2%),
+    linear-gradient(180deg, transparent 0 60%, #111923 60.2%);
+  opacity: 0.45;
+}
+
+#game-background::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(#e7eef5 0.8px, transparent 0.8px);
+  background-size: 39px 43px;
+  opacity: 0.25;
+  animation: snowfall 16s linear infinite;
+}
+
+@keyframes snowfall {
+  from { background-position: 0 0; }
+  to { background-position: 39px 430px; }
+}
+
+.start-screen {
+  width: min(100% - 40px, 570px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: max(30px, env(safe-area-inset-top)) 0 max(24px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.top-label,
+.eyebrow,
+.screen-footer,
+.menu-button > span:first-child {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+}
+
+.top-label {
+  color: #91a6b5;
+}
+
+.snowflake {
+  align-self: center;
+  margin-top: clamp(30px, 8vh, 70px);
+  color: #c8dce8;
+  font-size: 30px;
+  animation: rotate 22s linear infinite;
+}
+
+@keyframes rotate {
+  to { transform: rotate(360deg); }
+}
+
+.title-block {
+  text-align: center;
+  margin: 18px 0 36px;
+}
+
+.eyebrow {
+  color: #a5bac8;
+}
+
+h1 {
+  margin: 13px 0 0;
+  font-size: clamp(38px, 10vw, 65px);
+  line-height: 1;
+  letter-spacing: 0.13em;
+  font-weight: 500;
+}
+
+.subtitle {
+  margin-top: 17px;
+  color: #c3d4df;
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  letter-spacing: 0.42em;
+}
+
+.description {
+  margin-top: 28px;
+  color: #a7b4bf;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+}
+
+.menu {
+  display: grid;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.menu-button {
+  width: 100%;
+  min-height: 56px;
+  padding: 0 18px;
+  display: grid;
+  grid-template-columns: 38px 1fr 20px;
+  align-items: center;
+  gap: 12px;
+  color: #c2ced7;
+  background: #17222eaa;
+  border: 1px solid #71839140;
+  text-align: left;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.menu-button > span:nth-child(2) {
+  font-size: 11px;
+  letter-spacing: 0.13em;
+}
+
+.menu-button > span:first-child {
+  color: #8195a5;
+}
+
+.menu-button > span:last-child {
+  justify-self: end;
+}
+
+.menu-button:hover {
+  background: #263847;
+  border-color: #b6cad8;
+}
+
+.menu-button:active {
+  transform: scale(0.985);
+}
+
+.menu-button.primary {
+  color: #101923;
+  background: #c7d8e2;
+  border-color: #c7d8e2;
+}
+
+.menu-button.primary:hover {
+  background: #e5edf2;
+}
+
+.screen-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-top: 30px;
+  color: #8094a3;
+  font-size: 9px;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+  background: #080c12c9;
+  backdrop-filter: blur(8px);
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.dialog {
+  position: relative;
+  width: min(100%, 420px);
+  padding: 32px 24px 24px;
+  background: #17232f;
+  border: 1px solid #657d8f70;
+  box-shadow: 0 24px 100px #0008;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  border: 0;
+  color: #bdcbd5;
+  background: transparent;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.dialog h2 {
+  margin: 20px 0 12px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.dialog > p:not(.eyebrow) {
+  color: #b3c1cc;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.dialog .menu-button {
+  margin-top: 25px;
+}
+
+@media (max-height: 700px) {
+  .snowflake {
+    margin-top: 20px;
+  }
+
+  .title-block {
+    margin-bottom: 20px;
+  }
+
+  .description {
+    margin-top: 18px;
+  }
+
+  .menu-button {
+    min-height: 49px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
