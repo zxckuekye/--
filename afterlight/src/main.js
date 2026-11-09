@@ -1,6 +1,8 @@
 
 import './style.css';
 import Phaser from 'phaser';
+import Player from './characters/Player.js';
+import playerImage from './assets/персонаж.png';
 
 const SAVE_KEY = 'afterlight-winter-save';
 
@@ -96,6 +98,10 @@ class StationScene extends Phaser.Scene {
     super('station');
   }
 
+  preload() {
+    this.load.image('maxim', playerImage);
+  }
+
   create() {
     const width = this.scale.width;
     const height = this.scale.height;
@@ -150,14 +156,8 @@ class StationScene extends Phaser.Scene {
       color: '#a4b6c4'
     }).setOrigin(0.5);
 
-    const player = this.add.container(width / 2, height * 0.77);
+    this.player = new Player(this, width / 2, height * 0.82);
 
-    player.add([
-      this.add.rectangle(0, 0, 22, 29, 0x9db4c4),
-      this.add.rectangle(0, -19, 17, 15, 0xd8e4eb),
-      this.add.rectangle(-5, 15, 6, 12, 0x536d80),
-      this.add.rectangle(5, 15, 6, 12, 0x536d80)
-    ]);
 
     const beacon = this.add.circle(width * 0.78, height * 0.67, 13, 0xc4e8f5, 0.9);
 
@@ -221,6 +221,9 @@ class StationScene extends Phaser.Scene {
       repeat: -1
     });
   }
+  update(_, delta) {
+    this.player?.update(_, delta);
+  }
 }
 
 function startGame() {
@@ -249,3 +252,5 @@ function startGame() {
     scene: [StationScene]
   });
 }
+
+
