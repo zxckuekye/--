@@ -13,6 +13,16 @@ const dialogText = document.querySelector('#dialog-text');
 const dialogAction = document.querySelector('#dialog-action');
 const status = document.querySelector('#status');
 
+const continueButton = document.querySelector('#continue-game');
+
+function refreshContinueButton() {
+  const hasSave = Boolean(localStorage.getItem(SAVE_KEY));
+  continueButton.disabled = !hasSave;
+  continueButton.setAttribute('aria-disabled', String(!hasSave));
+}
+
+refreshContinueButton();
+
 let currentAction = null;
 
 function openDialog(label, title, text, actionLabel, action) {
@@ -49,6 +59,7 @@ document.querySelector('#new-game').addEventListener('click', () => {
   };
 
   localStorage.setItem(SAVE_KEY, JSON.stringify(save));
+  refreshContinueButton();
   status.textContent = 'SIGNAL DETECTED';
 
   openDialog(
@@ -252,5 +263,6 @@ function startGame() {
     scene: [StationScene]
   });
 }
+
 
 

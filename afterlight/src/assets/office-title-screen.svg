@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 320 180" shape-rendering="crispEdges">
+  <defs>
+    <pattern id="wall" width="32" height="24" patternUnits="userSpaceOnUse">
+      <rect width="32" height="24" fill="#28313a"/>
+      <path d="M0 23.5H32M31.5 0V24" stroke="#3a454b" stroke-width="1" opacity=".65"/>
+      <path d="M3 3H27" stroke="#343e45" opacity=".55"/>
+    </pattern>
+    <pattern id="tiles" width="20" height="12" patternUnits="userSpaceOnUse">
+      <rect width="20" height="12" fill="#242a2d"/>
+      <path d="M0 0H20M0 0V12M10 0V6M0 6H20M20 6V12" stroke="#465057" stroke-width="1" opacity=".78"/>
+      <path d="M2 2H8M12 8H18" stroke="#313a3e"/>
+    </pattern>
+    <linearGradient id="hall" x2="0" y2="1">
+      <stop stop-color="#38434a"/><stop offset=".72" stop-color="#30383d"/><stop offset="1" stop-color="#1b2024"/>
+    </linearGradient>
+    <linearGradient id="warmWindow" x2="0" y2="1">
+      <stop stop-color="#e5c77c"/><stop offset=".55" stop-color="#ad8855"/><stop offset="1" stop-color="#514941"/>
+    </linearGradient>
+    <radialGradient id="lampGlow">
+      <stop stop-color="#e9c878" stop-opacity=".42"/><stop offset="1" stop-color="#e9c878" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="screenGlow">
+      <stop stop-color="#78a997" stop-opacity=".3"/><stop offset="1" stop-color="#78a997" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Deep, tiled institutional interior -->
+  <rect width="320" height="180" fill="#171a20"/>
+  <rect width="320" height="113" fill="url(#wall)"/>
+  <rect y="0" width="320" height="15" fill="#1b2025"/>
+  <path d="M0 15H320M0 17H320" stroke="#56616a" opacity=".7"/>
+  <path d="M18 0V14M76 0V14M142 0V14M210 0V14M281 0V14" stroke="#303941" stroke-width="2"/>
+
+  <!-- fluorescent strips, one failing -->
+  <rect x="37" y="7" width="42" height="3" fill="#687d8c"/>
+  <rect x="39" y="7" width="37" height="1" fill="#d1d4c1" opacity=".72"/>
+  <rect x="195" y="7" width="50" height="3" fill="#66777d"/>
+  <rect x="199" y="7" width="14" height="1" fill="#c9cbb8" opacity=".7"/>
+  <rect x="229" y="7" width="7" height="1" fill="#a58a61"/>
+  <path d="M235 10l4 4-2 1 5 5" stroke="#a58a61" stroke-width="1" fill="none" opacity=".7"/>
+
+  <!-- long corridor perspective -->
+  <path d="M105 24H298V115H105Z" fill="url(#hall)" stroke="#15191d" stroke-width="4"/>
+  <path d="M119 34H286V111H119Z" fill="#303940" stroke="#5a6467" stroke-width="2"/>
+  <path d="M128 39H276V108H128Z" fill="#252d33"/>
+  <path d="M132 44H269V101H132Z" fill="#303a3f"/>
+  <path d="M140 47H260V98H140Z" fill="#293137"/>
+  <path d="M147 52H252V94H147Z" fill="#252c31"/>
+  <path d="M154 56H244V91H154Z" fill="#20262b"/>
+  <path d="M162 60H235V88H162Z" fill="#181e22"/>
+  <path d="M170 64H227V84H170Z" fill="#191e20"/>
+  <path d="M176 68H222V81H176Z" fill="url(#warmWindow)" opacity=".9"/>
+  <path d="M184 70H217V73H184Z" fill="#e6c876" opacity=".68"/>
+  <path d="M183 76H214V78H183Z" fill="#7b5740" opacity=".7"/>
+  <rect x="189" y="43" width="31" height="7" fill="#454f53" stroke="#78817d"/>
+  <text x="204.5" y="48.5" text-anchor="middle" fill="#c1b58e" font-family="monospace" font-size="4">ОКНО 03</text>
+  <rect x="177" y="38" width="6" height="6" fill="#873f43"/>
+  <path d="M178 39h4v4h-4z" fill="#d38a64"/>
+
+  <!-- Someone is waiting behind the impossible service window -->
+  <rect x="188" y="69" width="5" height="5" fill="#171a20"/>
+  <rect x="186" y="74" width="9" height="9" fill="#20272a"/>
+  <rect x="184" y="76" width="3" height="5" fill="#20272a"/>
+  <rect x="194" y="76" width="3" height="5" fill="#20272a"/>
+  <rect x="187" y="82" width="3" height="4" fill="#15191c"/>
+  <rect x="192" y="82" width="3" height="4" fill="#15191c"/>
+  <rect x="189" y="70" width="1" height="1" fill="#c1a46a"/>
+  <!-- a file card drifting where no air should move -->
+  <path d="M238 58h8v7h-8z" fill="#b4ab90" stroke="#1b2024" stroke-width="1"/>
+  <path d="M240 60h4m-4 2h3" stroke="#68675a" stroke-width=".7"/>
+  <rect x="246" y="61" width="2" height="2" fill="#873f43"/>
+  <!-- wall panels, board and notices -->
+  <rect x="18" y="31" width="39" height="31" fill="#343d42" stroke="#111518" stroke-width="3"/>
+  <rect x="21" y="34" width="33" height="25" fill="#a7a48e"/>
+  <path d="M24 39H49M24 43H45M24 47H50M24 51H41" stroke="#555d5b" stroke-width="1"/>
+  <rect x="27" y="35" width="13" height="2" fill="#873f43"/>
+  <rect x="43" y="37" width="6" height="6" fill="#687d8c"/>
+  <rect x="8" y="71" width="33" height="24" fill="#2d353b" stroke="#111519" stroke-width="2"/>
+  <rect x="11" y="74" width="27" height="18" fill="#344d67"/>
+  <text x="13" y="80" fill="#c6c8b6" font-family="monospace" font-size="4">ОЧЕРЕДЬ</text>
+  <text x="13" y="87" fill="#d0ad68" font-family="monospace" font-size="6">№ 004</text>
+  <path d="M30 83h5v5h-5z" fill="#a58a61"/>
+
+  <!-- cabinet and files -->
+  <rect x="55" y="63" width="34" height="47" fill="#303940" stroke="#14181c" stroke-width="3"/>
+  <rect x="59" y="67" width="26" height="8" fill="#3c4850" stroke="#68737a"/>
+  <rect x="59" y="78" width="26" height="8" fill="#39454c" stroke="#68737a"/>
+  <rect x="59" y="89" width="26" height="8" fill="#3c4850" stroke="#68737a"/>
+  <rect x="59" y="100" width="26" height="6" fill="#354047" stroke="#68737a"/>
+  <path d="M69 70h7v2h-7M69 81h7v2h-7M69 92h7v2h-7M69 102h7v2h-7" fill="#a58a61"/>
+  <path d="M61 64v-4h5v4M69 64v-6h5v6M77 64v-3h6v3" fill="#7f7160"/>
+
+  <!-- clock: wrong time, red second hand -->
+  <rect x="82" y="28" width="22" height="22" fill="#171a20"/>
+  <rect x="84" y="30" width="18" height="18" fill="#a9a995"/>
+  <path d="M93 32v7h6M93 39l-5 5" stroke="#303638" stroke-width="1.5" fill="none"/>
+  <rect x="92" y="38" width="2" height="2" fill="#873f43"/>
+  <rect x="91" y="25" width="4" height="2" fill="#56616a"/>
+
+  <!-- tile floor and perspective path -->
+  <rect y="112" width="320" height="68" fill="url(#tiles)"/>
+  <path d="M0 112H320" stroke="#7b817a" stroke-width="2"/>
+  <path d="M99 112L132 180M220 112L190 180" stroke="#68716e" stroke-width="2" opacity=".55"/>
+  <path d="M0 132H320M0 153H320" stroke="#59615f" opacity=".5"/>
+  <path d="M110 124H210M119 139H201M129 157H191" stroke="#a58a61" opacity=".16" stroke-width="2"/>
+
+  <!-- light spill and tiny floating dust -->
+  <ellipse cx="194" cy="88" rx="47" ry="29" fill="url(#lampGlow)"/>
+  <ellipse cx="235" cy="124" rx="30" ry="16" fill="url(#screenGlow)"/>
+  <rect x="21" y="103" width="1.5" height="1.5" fill="#d4bd83"/>
+  <rect x="92" y="81" width="1" height="1" fill="#d3c28e"/>
+  <rect x="114" y="95" width="1.5" height="1.5" fill="#9ba9a0"/>
+  <rect x="265" y="63" width="1.5" height="1.5" fill="#d6bb7e"/>
+  <rect x="287" y="101" width="1" height="1" fill="#a7b4a5"/>
+  <rect x="155" y="28" width="1.5" height="1.5" fill="#d3c28e"/>
+
+  <!-- foreground reception counter, forms, CRT, lamp and cup -->
+  <rect x="117" y="97" width="203" height="7" fill="#6c6251" stroke="#111518" stroke-width="2"/>
+  <path d="M122 104H318V123H122Z" fill="#47433b" stroke="#171a1d" stroke-width="2"/>
+  <path d="M129 107H309V119H129Z" fill="#51483c"/>
+  <path d="M146 109h45v7h-45zM224 108h32v9h-32z" fill="#393a36"/>
+  <path d="M151 110h35v1h-35m0 2h28m-28 2h31" stroke="#b9b49f" stroke-width="1" opacity=".7"/>
+  <path d="M235 110h24v1h-24m0 2h18m-18 2h21" stroke="#aaa998" stroke-width="1" opacity=".62"/>
+  <rect x="193" y="75" width="34" height="21" fill="#20262a" stroke="#111518" stroke-width="3"/>
+  <rect x="197" y="78" width="26" height="14" fill="#364b47"/>
+  <rect x="199" y="80" width="19" height="2" fill="#83a48f"/>
+  <rect x="199" y="84" width="14" height="1" fill="#91ab91"/>
+  <rect x="199" y="87" width="20" height="1" fill="#748e82"/>
+  <rect x="207" y="96" width="7" height="3" fill="#6e7169"/>
+  <rect x="202" y="98" width="18" height="2" fill="#77796e"/>
+
+  <!-- warm desk lamp -->
+  <path d="M272 97V80l-8-8" stroke="#a58a61" stroke-width="2" fill="none"/>
+  <path d="M258 68h18l5 8h-28z" fill="#a58a61" stroke="#191b1d" stroke-width="2"/>
+  <rect x="258" y="77" width="14" height="2" fill="#e3c37b"/>
+  <rect x="266" y="80" width="2" height="15" fill="#776b51"/>
+  <rect x="259" y="95" width="15" height="2" fill="#988463"/>
+  <path d="M252 99h29v1h-29" fill="#d0aa60" opacity=".6"/>
+
+  <!-- cup, stamp, paper stack, lonely plant -->
+  <rect x="286" y="94" width="8" height="6" fill="#65675f" stroke="#181b1d"/>
+  <path d="M294 95h3v3h-3" stroke="#77796f" fill="none"/>
+  <rect x="298" y="101" width="13" height="2" fill="#873f43"/>
+  <rect x="300" y="98" width="11" height="3" fill="#d2cbb3"/>
+  <rect x="303" y="96" width="9" height="2" fill="#c4bfa9"/>
+  <rect x="111" y="91" width="7" height="7" fill="#566548"/>
+  <rect x="107" y="86" width="5" height="7" fill="#71815c"/>
+  <rect x="116" y="84" width="4" height="8" fill="#687755"/>
+  <rect x="113" y="97" width="5" height="4" fill="#72604c"/>
+  <rect x="109" y="99" width="12" height="3" fill="#544a3b"/>
+
+  <!-- vignette and subtle frame -->
+  <path d="M0 0H320V180H0Z" fill="none" stroke="#111418" stroke-width="7"/>
+  <rect x="3" y="3" width="314" height="174" fill="none" stroke="#59636a" stroke-width="1" opacity=".38"/>
+</svg>
+
